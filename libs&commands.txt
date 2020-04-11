@@ -1,0 +1,21 @@
+1. pyspark: To launch python interpreter i.e. configured to run Spark Applications. It first build Spark, and launch interpreter
+Ref:
+https://spark.apache.org/docs/0.9.0/python-programming-guide.html
+
+2. spark-submit: A command to run an application on a cluster
+Ref:
+https://spark.apache.org/docs/latest/submitting-applications.html
+
+3. SparkConf: (Configuration parameter - contains some properties of spark driver application and some properties related to resource allocation such as number of clusters/memory-size/cores used by executor)
+	Guides how to access Spark Cluster
+	Ref: https://data-flair.training/blogs/learn-apache-spark-sparkcontext/
+
+4. SparkContext: (creates connection with Spark Cluster)
+	Ref: https://data-flair.training/blogs/learn-apache-spark-sparkcontext/ 
+
+5. YARN/Mesos (Resource Manager - help application to access spark cluster)
+
+6. SparkSession: (Unified entry point which provides ways to interact with various spark's functionality)
+	Ref:
+	https://medium.com/@achilleus/spark-session-10d0d66d1d24
+	

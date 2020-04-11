@@ -1,0 +1,5 @@
+Unified Analytics: A Solution that unify data processing with AI technologies.
+Ref:
+https://databricks.com/glossary/what-is-unified-analytics
+
+Hive: Runs on top of Hadoop, basically used for Data Warehousing.

@@ -1,0 +1,35 @@
+What is Spark?
+	An Unified analytics engine to process large amount of data. 
+	The main adavantages of Spark is: 
+		handle different varities of Big Data Problems, 
+		almost real-time, 
+		can perform machine learning and deep learning operations, 
+		SparkSQL to access data via SQL queries 
+
+	Spark uses DAG(Directed Acyclic Graph) Engine to optimizes workflow. That makes it faster than other tools like MapReduce.
+
+	Built around one main concept i.e. RDD (Resilient Distributed Dataset)
+
+
+Architecture:
+	Master-Worker (Master hosts Driver Program & Worker hosts Executors)
+
+	Involved in Architecture:
+		Driver Program: Responsible to manage and delegate tasks to Worker Node
+		Worker Node: Responsible to execute task assigned by Driver Program
+		Cluster Manager: Responsible to allocate resources to perform tasks
+		Executor: A JVM process on Worker Node to execute task and store data in memory
+
+
+Spark Ecosystem:
+	Spark Core
+	Spark Streaming:
+		Analyse Real-time data-streams
+	Spark SQL
+		Deals with Structured data using SQL queries.
+	MLLib
+		Series of Machine Learning. Can be used for Data mining or to run any machine learning algorithm
+	GraphX 
+
+Reference:
+https://medium.com/@achilleus/apache-spark-101-971aaf5d4334

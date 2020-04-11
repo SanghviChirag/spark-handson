@@ -1,0 +1,40 @@
+RDD (Resilient Distributed Dataset)
+	Abstraction of giant set of data.
+	Various functions of RDD will be used to load the data, and to process it in distributed node.
+
+1. Create RDD:
+	SparkContext (represents connection to a Spark cluster)
+		Created by Driver Program
+		Create RDD's, responsible to make RDD resilient and distributed
+
+	sc(SparkContext):
+		sc.textFile --> command will create RDD and load file data.
+			Can create textFile from 
+				LocalComputer using (file://)
+				S3 using (s3n://)
+				Hadoop using (hdfs://)
+
+			Can Create from Databases such as JDBC, Cassandra
+			Can Create from CSV, JSON and any other formats which language supports to load data.
+
+
+2. Transform RDD:
+	Some of the common operations:
+		1. map
+		2. flatmap
+		3. filter
+		4. distinct
+		5. sample
+		6. union, interaction, subtract, cartesian (return Every possible combination)
+
+3. RDD actions: (Basically gather results after transforming data)
+	1. collect
+	2. count
+	3. countByValue
+	4. take
+	5. top
+	6. reduce and many more
+
+
+NOTE: Lazy Evaluation (Script will not do anything untill action method is called.)
+

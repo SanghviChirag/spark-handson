@@ -1,0 +1,40 @@
+For Windows:
+1. Install Anaconda: https://www.anaconda.com/distribution/#download-section (Recommended - 3.7)
+2. Install JDK: https://www.oracle.com/java/technologies/javase-downloads.html
+3. Install JRE: https://www.oracle.com/java/technologies/javase-jre8-downloads.html
+4. Spark: (Install WinRAR to extract tgz folder)
+	Install - https://spark.apache.org/downloads.html
+		Choose Spark Release (Latest and Stable version)
+		Package Type (Pre-build for apache hadoop 3.2 and later)
+		Download
+
+	- Extract
+
+	- Create a directory under C: named "Spark"
+		- Add Extracted files under "C:\Spark"
+		- Go conf under C:\Spark
+			- Change log4j.properties.template to log4j.properties
+			- Alter following command of "log4j.properties"
+				log4j.rootCategory=INFO, console
+			 	To
+			 	log4j.rootCategory=ERROR, console
+
+5. Winutils: (To fool Spark that hadoop is running in our system)
+	- Download: https://sundog-spark.s3.amazonaws.com/winutils.exe
+	- Create a directory under C: drive named "winutils"
+		- create bin folder under winutils
+		- Add downloaded script
+
+6. Set enviornment Variables
+	- SPARK_HOME: C:\Spark
+	- HADOOP_HOME: C:\winutils
+	- JAVA_HOME: C:\Program Files\Java\jdk-14
+
+7. Update PATH Variable (Add following commands)
+	- %SPARK_HOME%\bin
+	- %JAVA_HOME%\bin
+
+8. Test successful installation:
+	- Open Anaconda Command prompt
+	- Go to Spark Dir i.e. C:\Spark
+	- run commdand "pyspark" (It will open shell if installation is successful)
